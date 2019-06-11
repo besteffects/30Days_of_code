@@ -19,7 +19,7 @@ public class Operators {
 
         int tax_percent = scanner.nextInt();
         scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
-        double totalCost=(solve(meal_cost, tip_percent, tax_percent));
+        double totalCost=solve(meal_cost, tip_percent, tax_percent);
 
         System.out.println(round(totalCost));
         scanner.close();
