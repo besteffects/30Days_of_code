@@ -1,10 +1,5 @@
-import java.io.*;
-import java.math.*;
-import java.security.*;
-import java.text.*;
 import java.util.*;
-import java.util.concurrent.*;
-import java.util.regex.*;
+
 
 public class Arrays {
     private static final Scanner scanner = new Scanner(System.in);
@@ -12,7 +7,7 @@ public class Arrays {
     public static void main(String[] args) {
         int n = scanner.nextInt();
         scanner.skip("(\r\n|[\n\r\u2028\u2029\u0085])?");
-       // System.out.println(n);
+        // System.out.println(n);
         int[] arr = new int[n];
 
         String[] arrItems = scanner.nextLine().split(" ");
@@ -25,5 +20,5 @@ public class Arrays {
             System.out.print(arrItem+" ");
         }
         scanner.close();
-}
+    }
 }
