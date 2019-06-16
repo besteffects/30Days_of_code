@@ -3,7 +3,7 @@ public class RecursionBasics {
     public static void main(String[] args) {
         System.out.println(exponentiation(5, 3));
         System.out.println(summation(3));
-        System.out.println(factorial(3));
+        System.out.println(factorial(4));
     }
 
     public static int exponentiation(int n, int p) {
@@ -46,7 +46,7 @@ public class RecursionBasics {
             //4*3*Factorial(2)
             //4*3*2*Factorial(1)
             //4*3*2*1
-            return n*factorial(n-1);
+            return n*factorial(n -1);
         }
     }
 }
