@@ -22,6 +22,6 @@ public class TwoDArraysExample {
     return myArray1;
     }
     public static void main(String[] args) {
-        System.out.println(createArray1());
+        createArray1();
     }
 }
