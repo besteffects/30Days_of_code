@@ -69,7 +69,7 @@ public class TwoDArrays {
         int max = sum[0];
         for (int counter = 0; counter < sum.length; counter++) {
             if (sum[counter] > max) {
-                sum = arr[counter];
+                max = sum[counter];
             }
         }
         System.out.println("The highest maximum is: " + max);
