@@ -1,7 +1,7 @@
 package Animal;
 
 public class Animal {
-    public int age;
+    private int age;
 
     public Animal(int age){
         this.age=age;
@@ -11,17 +11,24 @@ public class Animal {
     public void eat(){
         System.out.println("An animal is eating");
     }
+    public int getAge(){
+        return age;
+    }
 
     public static void main(String[] args) {
         Animal a=new Animal(5);
         Dog d = new Dog();
         Cat c= new Cat();
         d.ruff();
+        System.out.println(d.getAge());
         c.meow();
+        System.out.println(c.getAge());
         a.eat();
         d.eat();
         c.eat();
         d.run();
         c.prence();
+        // What happens if...
+
     }
 }
