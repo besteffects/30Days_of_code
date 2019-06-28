@@ -2,11 +2,11 @@ package QueuesAndStacksImpl;
 
 import java.util.LinkedList;
 
-public class Queuey {
+public class QueueyImpl {
     LinkedList queue;
 
     //Making a queue instance
-    public Queuey(){
+    public QueueyImpl(){
         queue=new LinkedList();
     }
 
@@ -23,7 +23,7 @@ public class Queuey {
      public void enque(int n){
         queue.addLast(n);
      }
-
+//Peek at the first item
      public int peek(){
        return (int)queue.get(0);
      }
@@ -34,11 +34,11 @@ public class Queuey {
      }
 
     public static void main(String[] args) {
-   Queuey numberqueue =new Queuey();
+   QueueyImpl numberqueue =new QueueyImpl();
    numberqueue.enque(5);
    numberqueue.enque(7);
    numberqueue.enque(6);
-   System.out.println("First out: " + numberqueue.dequeue());
+        System.out.println("First out: " + numberqueue.dequeue());
         System.out.println("Second out: " + numberqueue.dequeue());
         System.out.println("Second out: " + numberqueue.dequeue());
     }
