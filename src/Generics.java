@@ -1,15 +1,28 @@
+/*
+The letters enclosed between angle brackets (< and >) are type parameters and, like many things in programming, there is
+ a convention behind them (remember, following conventions help us write clean, readable code!). The letters below are
+ commonly-used generic type parameters:
+    E - Element
+    K - Key
+    V - Value
+    N - Number
+    T - Type (e.g.: data type)
+    S,U,V, etc. These are second, third, and fourth types for when T is already in use.
+*/
+
 import java.util.*;
 
-class Printer <T> {
+class Printer<T> {
     /**
-     *    Method Name: printArray
-     *    Print each element of the generic array on a new line. Do not return anything.
-     *    @param A generic array
+     * Method Name: printArray
+     * Print each element of the generic array on a new line. Do not return anything.
+     *
+     * @param A generic array
      **/
 
     // Write your code here
-    public <A> void printArray(A[] array ) {
-        for(int i=0;i<array.length;i++){
+    public <A> void printArray(A[] array) {
+        for (int i = 0; i < array.length; i++) {
             System.out.println(array[i]);
         }
     }
@@ -17,7 +30,7 @@ class Printer <T> {
 
 public class Generics {
 
-    public static void main(String args[]){
+    public static void main(String args[]) {
         Scanner scanner = new Scanner(System.in);
         int n = scanner.nextInt();
         Integer[] intArray = new Integer[n];
@@ -33,9 +46,9 @@ public class Generics {
 
         Printer<Integer> intPrinter = new Printer<Integer>();
         Printer<String> stringPrinter = new Printer<String>();
-        intPrinter.printArray( intArray  );
-        stringPrinter.printArray( stringArray );
-        if(Printer.class.getDeclaredMethods().length > 1){
+        intPrinter.printArray(intArray);
+        stringPrinter.printArray(stringArray);
+        if (Printer.class.getDeclaredMethods().length > 1) {
             System.out.println("The Printer class should only have 1 method named printArray.");
         }
     }
