@@ -40,5 +40,15 @@ public class TicTacToe {
     public boolean isSpotTaken(int number) {
         return board[number - 1] != '=';
     }
+    public void printBoard() {
+        System.out.println();
+        for(int i=0;i<board.length;i++){
+            if (i%3==0 && i!=0){
+                System.out.println();
+                System.out.println("----------------------");
+            }
+            System.out.println();
+    }
+    }
 
 }
