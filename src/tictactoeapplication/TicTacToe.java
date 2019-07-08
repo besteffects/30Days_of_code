@@ -12,7 +12,7 @@ public class TicTacToe {
         this.aiMarker = aiMarker;
         this.winner = '-';
         this.board = setBoard();
-        this.currentMarker=userMarker;
+        this.currentMarker = userMarker;
     }
 
     public static char[] setBoard() {
@@ -67,9 +67,9 @@ public class TicTacToe {
     }
 
     public boolean isThereAwinner() {
-        boolean diagonalsAndMiddles = (rightDi() || leftDi() || middleRow()) && board[4] != '-';
-        boolean topAndFirst = (topRow() || firstCol()) && board[0] != '-';
-        boolean bottomAndThird = (bottomRow() || thirdCol()) && board[8] != '-';
+        boolean diagonalsAndMiddles = ( rightDi() || leftDi() || middleRow() ) && board[4] != '-';
+        boolean topAndFirst = ( topRow() || firstCol() ) && board[0] != '-';
+        boolean bottomAndThird = ( bottomRow() || thirdCol() ) && board[8] != '-';
         if (diagonalsAndMiddles) {
             this.winner = board[4];
         } else if (topAndFirst) {
@@ -121,17 +121,15 @@ public class TicTacToe {
         return true;
     }
 
-    public String gameOver(){
-       boolean didSomeOneWin=isThereAwinner();
-       if(didSomeOneWin){
-           return "We have a winner. The winner is " + this.winner + "'s";
-       }
-       else if(isTheBoardFilled()){
-           return "Draw: Game Over!";
-       }
-       else{
-           return "notOver";
-       }
+    public String gameOver() {
+        boolean didSomeOneWin = isThereAwinner();
+        if (didSomeOneWin) {
+            return "We have a winner. The winner is " + this.winner + "'s";
+        } else if (isTheBoardFilled()) {
+            return "Draw: Game Over!";
+        } else {
+            return "notOver";
+        }
     }
 
 }

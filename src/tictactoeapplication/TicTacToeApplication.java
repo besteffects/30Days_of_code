@@ -57,7 +57,7 @@ public class TicTacToeApplication {
         System.out.println("Do you want to play again? Enter Y if you do. "
                 + "Enter anything else if you are tired of me.");
         char response = sc.next().charAt(0);
-        doYouWantToPlay = (response == 'Y');
+        doYouWantToPlay = ( response == 'Y' );
         System.out.println();
         System.out.println();
     }
