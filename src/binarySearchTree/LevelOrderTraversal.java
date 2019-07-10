@@ -19,13 +19,12 @@ class LevelOrderTraversal {
     }
 }
 
-class Solution {
-
+class LevelOrder {
     static void levelOrder(Node root) {
         //Write your code here
         Queue<Node> queue = new LinkedList();
         // enqueue current root
-        queue.add(root);
+        queue.add(/**/root);
 
         // while there are nodes to process
         while (!queue.isEmpty()) {
@@ -33,7 +32,6 @@ class Solution {
             Node tree = queue.remove();
             System.out.print(tree.data + " ");
             // process tree's root;
-
             // enqueue child elements from next level in order
             if (tree.left != null) {
                 queue.add(tree.left);
