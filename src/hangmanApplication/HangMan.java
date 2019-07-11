@@ -58,4 +58,50 @@ public class HangMan {
         }
         return current;
     }
+
+    public String drawPicture() {
+        switch (currentTry) {
+            case 0:
+                return noPersonDraw();
+            case 1:
+                return addHeadDraw();
+            case 2:
+                return addVBodyDraw();
+            case 3:
+                return addOneArmDraw();
+            case 4:
+                return addSecondArmDraw();
+            default:
+                return fullPersonDraw();
+        }
+    }
+
+    private String fullPersonDraw() {
+    }
+
+    private String addSecondArmDraw() {
+    }
+
+    private String addOneArmDraw() {
+    }
+
+    private String addVBodyDraw() {
+
+    }
+
+    private String addHeadDraw() {
+    }
+
+    private String noPersonDraw() {
+        /*
+        " - - - - -\n"+
+        "| |\n"+
+        "| O\n" +
+        "| / | \\ \n"+
+        "| |\n" +
+         | / \\ \n" +
+         "|\n" +
+         "|\n";
+         */
+    }
 }
