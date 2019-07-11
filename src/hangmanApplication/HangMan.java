@@ -1,7 +1,5 @@
 package hangmanApplication;
 
-import com.sun.scenario.effect.impl.sw.sse.SSEBlend_SRC_OUTPeer;
-
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
@@ -59,6 +57,11 @@ public class HangMan {
         return current;
     }
 
+    // _ _ A _ _ B
+    public String getFormalCurrentGuess(){
+        return "Current Guess " + currentGuess.toString();
+    }
+
     public String drawPicture() {
         switch (currentTry) {
             case 0:
@@ -66,42 +69,113 @@ public class HangMan {
             case 1:
                 return addHeadDraw();
             case 2:
-                return addVBodyDraw();
+                return addBodyDraw();
             case 3:
                 return addOneArmDraw();
             case 4:
                 return addSecondArmDraw();
+            case 5:
+                return addFirstLegDraw();
             default:
                 return fullPersonDraw();
         }
     }
 
     private String fullPersonDraw() {
+        return
+                "- - - - -\n" +
+                        "|       |\n" +
+                        "|       0\n" +
+                        "|     / | \\  \n" +
+                        "|       |\n" +
+                        "|      /  \\ \n" +
+                        "|\n" +
+                        "|\n";
     }
 
-    private String addSecondArmDraw() {
+    private String addBodyDraw() {
+        return
+                "- - - - -\n" +
+                        "|       |\n" +
+                        "|       0\n" +
+                        "|       | \n" +
+                        "|       |\n" +
+                        "|       \n" +
+                        "|\n" +
+                        "|\n";
+
     }
 
     private String addOneArmDraw() {
+        return
+                "- - - - -\n" +
+                        "|       |\n" +
+                        "|       0\n" +
+                        "|     / |  \n" +
+                        "|       |\n" +
+                        "|        \n" +
+                        "|\n" +
+                        "|\n";
     }
 
-    private String addVBodyDraw() {
-
+    private String addSecondArmDraw() {
+        return
+                "- - - - -\n" +
+                        "|       |\n" +
+                        "|       0\n" +
+                        "|     / | \\  \n" +
+                        "|       |\n" +
+                        "|        \n" +
+                        "|\n" +
+                        "|\n";
     }
 
     private String addHeadDraw() {
+        return
+                "- - - - -\n" +
+                        "|       |\n" +
+                        "|       0\n" +
+                        "|       \n" +
+                        "|       \n" +
+                        "|       \n" +
+                        "|\n" +
+                        "|\n";
+    }
+
+    private String addFirstLegDraw() {
+        return
+                "- - - - -\n" +
+                        "|       |\n" +
+                        "|       0\n" +
+                        "|     / | \\  \n" +
+                        "|       |\n" +
+                        "|      / \n" +
+                        "|\n" +
+                        "|\n";
     }
 
     private String noPersonDraw() {
-        /*
-        " - - - - -\n"+
-        "| |\n"+
-        "| O\n" +
-        "| / | \\ \n"+
-        "| |\n" +
-         | / \\ \n" +
-         "|\n" +
-         "|\n";
-         */
+        return
+                " - - - - -\n" +
+                        "|         |\n" +
+                        "|          \n" +
+                        "|         \n" +
+                        "|          \n" +
+                        "|        \n" +
+                        "|\n" +
+                        "|\n";
+
     }
+
+
 }
+/*
+                        "- - - - -\n"+
+                        "|       |\n"+
+                        "|       0\n" +
+                        "|     / | \\  \n"+
+                        "|       |\n" +
+                        "|      /  \\ \n" +
+                        "|\n" +
+                        "|\n";
+ */
