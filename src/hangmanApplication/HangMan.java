@@ -31,10 +31,11 @@ public class HangMan {
             String currentLine = bufferedReader.readLine();
             while (currentLine != null) {
                 dictionary.add(currentLine);
+                currentLine = bufferedReader.readLine();
             }
             bufferedReader.close();
             fileReader.close();
-        } catch (IOException E) {
+        } catch (IOException e) {
             System.out.println("Could not init streams");
         }
     }
@@ -63,7 +64,51 @@ public class HangMan {
     }
 
     public boolean gameOver() {
-        return true;
+        if (didWeWin()) {
+            System.out.println();
+            System.out.println("Congrats! You won! You guessed the right word!");
+            return true;
+        } else if (didWeLoose()) {
+            System.out.println();
+            System.out.println("Sorry, you lost. You spent all of your 6 tries. "
+                    + "The word was " + mysteryWord + ".");
+            return true;
+        }
+        return false;
+    }
+
+    public boolean didWeWin() {
+        String guess = getCondensedCurrentGuess();
+        return guess.equals(mysteryWord);
+    }
+
+    public String getCondensedCurrentGuess() {
+        String guess = currentGuess.toString();
+        return guess.replace(" ", "");
+    }
+
+    public boolean didWeLoose() {
+        return currentTry >= maxTries;
+    }
+
+    public boolean isGuessedAlready(char guess) {
+        return previousGuesses.contains(guess);
+    }
+
+    public boolean playGuess(char guess) {
+        boolean isItGoodGuess = false;
+        previousGuesses.add(guess);
+        for (int i = 0; i < mysteryWord.length(); i++) {
+            if (mysteryWord.charAt(i) == guess) {
+                currentGuess.setCharAt(i * 2, guess);
+                isItGoodGuess = true;
+                previousGuesses.add(guess);
+            }
+        }
+        if (!isItGoodGuess) {
+            currentTry++;
+        }
+        return isItGoodGuess;
     }
 
     public String drawPicture() {
