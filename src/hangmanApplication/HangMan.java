@@ -25,8 +25,10 @@ public class HangMan {
 
     public void initializeStreams() throws IOException {
         try {
-            File inFile = new File("dictionary.txt");
-            fileReader = new FileReader(inFile);
+            //relative path
+            File inFile = new File("src\\hangmanApplication\\dictionary.txt");
+            String file=inFile.getAbsolutePath();
+            fileReader = new FileReader(file);
             bufferedReader = new BufferedReader(fileReader);
             String currentLine = bufferedReader.readLine();
             while (currentLine != null) {
@@ -102,7 +104,6 @@ public class HangMan {
             if (mysteryWord.charAt(i) == guess) {
                 currentGuess.setCharAt(i * 2, guess);
                 isItGoodGuess = true;
-                previousGuesses.add(guess);
             }
         }
         if (!isItGoodGuess) {
