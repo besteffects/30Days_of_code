@@ -10,12 +10,12 @@ public class HangmanApplication {
         System.out.println("Welcome to hangman! I will pick a word and you will "
                 + "try to guess it character "
                 + "by character."
-                + ".\n If I guess wrong 6 times, then I win. \nIf you can guess it before then, you win."
-                + "Are you ready? I hope so because I am");
+                + "\nIf I guess wrong 6 times, then I win. \nIf you can guess it before then, you win."
+                + " Are you ready? I hope so because I am");
         System.out.println();
         System.out.println("I have picked my word. Below is a picture and below "
                 + "that is your current guess, which starts off as nothing. \nEvery time you "
-                + "guess incorrectly, I add a body part to the picture. \n When there is a full"
+                + "guess incorrectly, I add a body part to the picture. \nWhen there is a full"
                 + " person, you lose");
         // Allows for multiple games
         boolean doYouWantToPlay = true;
@@ -43,7 +43,7 @@ public class HangmanApplication {
                 }
                 //Play the guess
                 if(game.playGuess(guess)){
-                    System.out.println("Great guess1 That character is in the word!");
+                    System.out.println("Great guess! That character is in the word!");
                 } else{
                     System.out.println("Unfortunately that character isn't in the word");
                 }

@@ -27,7 +27,7 @@ public class HangMan {
         try {
             //relative path
             File inFile = new File("src\\hangmanApplication\\dictionary.txt");
-            String file=inFile.getAbsolutePath();
+            String file = inFile.getAbsolutePath();
             fileReader = new FileReader(file);
             bufferedReader = new BufferedReader(fileReader);
             String currentLine = bufferedReader.readLine();
@@ -220,6 +220,7 @@ public class HangMan {
 
 }
 /*
+example
                         "- - - - -\n"+
                         "|       |\n"+
                         "|       0\n" +
