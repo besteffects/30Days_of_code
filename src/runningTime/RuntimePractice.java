@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 // linear time O(n) time, because we have to check each character once
-public class runtimePractice {
+public class RuntimePractice {
     public static int findNumberOfRepetitions(String s, char c) {
         int sum = 0;
         for (int i = 0; i < s.length(); i++) {  //1, n+1, n
