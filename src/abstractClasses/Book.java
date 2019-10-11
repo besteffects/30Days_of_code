@@ -1,6 +1,4 @@
-package AbstractClasses;
-
-import java.util.*;
+package abstractClasses;
 
 abstract class Book {
     String title;

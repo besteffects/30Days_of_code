@@ -1,4 +1,4 @@
-package LinkedListImpl;
+package linkedListImpl;
 
 public class Node {
     //Properties

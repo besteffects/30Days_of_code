@@ -1,4 +1,4 @@
-package Interfaces;
+package interfaces;
 
 public class Hero implements Character {
     public String weapon = "The Force";

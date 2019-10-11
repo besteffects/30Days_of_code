@@ -1,4 +1,4 @@
-package Scope;
+package scope;
 
 import java.util.Scanner;
 

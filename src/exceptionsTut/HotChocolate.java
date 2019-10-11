@@ -1,4 +1,4 @@
-package ExceptionsTut;
+package exceptionsTut;
 
 import java.util.concurrent.TimeUnit;
 

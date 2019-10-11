@@ -7,7 +7,7 @@ two characters to see if they are the same; as long as the characters match, we 
 popping, and comparing each character until our containers are empty (a non-match means s isn't a palindrome).
  */
 
-package QueuesAndStacksImpl;
+package queuesAndStacksImpl;
 
 import java.util.*;
 

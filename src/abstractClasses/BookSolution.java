@@ -1,4 +1,4 @@
-package AbstractClasses;
+package abstractClasses;
 
 import java.util.Scanner;
 

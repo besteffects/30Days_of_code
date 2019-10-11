@@ -1,6 +1,4 @@
-package Interfaces;
-
-import org.omg.CORBA.PUBLIC_MEMBER;
+package interfaces;
 
 public class Enemy implements Character {
 

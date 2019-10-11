@@ -1,4 +1,4 @@
-package LinkedList;
+package linkedList;
 
 /*
 A Node class is provided for you in the editor. A Node object has an integer data field, data ,and a Node instance pointer, next
