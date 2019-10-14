@@ -14,4 +14,25 @@ public class Testers {
             }
         }
     }
+
+    public static void checkAddMemberCardinality(Tree t, int x) throws Exception{
+int nT=(t.add(x).cardinality());
+        //1. Either something was added and a cardinality increased by one.
+        if(nT==(t.cardinality()+1)){
+            if(!t.member(x)){
+                throw new Exception("The cardinality increased by 1, but the thing"
+                + " that was added was already a member of the tree");
+            }
+        }//2. Or the thing that was added was alredy there and therefore not really added
+        //so the cardinality stayed the same.
+        else if (nT==t.cardinality()){
+            if(!t.member(x)){
+                throw new Exception("The cardinality didn;'t increase by 1, but"
+                + " we added a new thing");
+            }
+        }
+        else{
+            throw new Exception("Something is wrong with our program");
+        }
+    }
 }
