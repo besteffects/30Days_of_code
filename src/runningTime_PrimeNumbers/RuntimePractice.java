@@ -1,6 +1,5 @@
-package runningTime;
+package runningTime_PrimeNumbers;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 
 // linear time O(n) time, because we have to check each character once
